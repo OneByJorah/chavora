@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Capture ChatForge screenshots using Playwright HTML mockups.
+"""Capture chavora screenshots using Playwright HTML mockups.
 
 Usage:
     python scripts/capture-screenshots.py
@@ -22,7 +22,7 @@ CHAT_HTML = r"""
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatForge - AI Chat</title>
+    <title>chavora - AI Chat</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -85,7 +85,7 @@ MODELS_HTML = r"""
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>ChatForge - Models</title>
+    <title>chavora - Models</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -117,7 +117,7 @@ HISTORY_HTML = r"""
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>ChatForge - History</title>
+    <title>chavora - History</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }

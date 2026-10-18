@@ -15,7 +15,7 @@ let chatHistory = [
 	{
 		role: "assistant",
 		content:
-			"Hello! I'm ChatForge, powered by Cloudflare Workers AI. How can I help you today?",
+			"Hello! I'm chavora, powered by Cloudflare Workers AI. How can I help you today?",
 	},
 ];
 let isProcessing = false;

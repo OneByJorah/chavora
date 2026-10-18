@@ -4,10 +4,10 @@ Instructions for AI coding agents (OpenCode, Freebuff/Codebuff, Hermes workers, 
 
 ## Project
 
-- **What it is:** replace with one sentence.
-- **Stack:** replace (language, framework, runtime).
-- **Run locally:** `cp .env.example .env && docker compose up -d --build`, then open `http://127.0.0.1:8080`.
-- **Health check:** `GET /healthz` must return 200.
+- **What it is:** Edge-native AI chat interface — a single Cloudflare Worker serving a streaming chat UI powered by Workers AI.
+- **Stack:** TypeScript, Cloudflare Workers, Workers AI, vanilla HTML/CSS/JS, nginx (Docker static preview).
+- **Run locally:** `cp .env.example .env && sg docker -c 'docker compose up -d --build'`, then open `http://127.0.0.1:8787`.
+- **Health check:** `GET /health` must return 200.
 
 ## Commands
 

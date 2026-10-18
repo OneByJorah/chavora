@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 FROM nginx:stable-alpine
 
-LABEL org.opencontainers.image.title="ChatForge" \
-      org.opencontainers.image.description="Static UI preview for ChatForge AI chat interface" \
+LABEL org.opencontainers.image.title="chavora" \
+      org.opencontainers.image.description="Static UI preview for chavora AI chat interface" \
       org.opencontainers.image.vendor="OneByJorah" \
       org.opencontainers.image.version="1.0.0"
 

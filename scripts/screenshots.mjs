@@ -17,8 +17,17 @@ const RECORD = process.env.RECORD === "1";
 
 // Edit this list per project: one entry per screen worth showing.
 const PAGES = [
-  { name: "dashboard", path: "/", waitFor: "#app-ready" },
+  { name: "chavora-ui", path: "/", waitFor: ".chat-container" },
+  { name: "chavora-mobile", path: "/", viewport: { width: 390, height: 844 } },
 ];
+
+// If a page has its own viewport, use it; otherwise fall back to the default desktop viewport.
+async function newPage(context, pageDef) {
+  const viewport = pageDef.viewport || { width: 1440, height: 900 };
+  const page = await context.newPage();
+  await page.setViewportSize(viewport);
+  return page;
+}
 
 const FORBIDDEN = [
   { label: "private IPv4", re: /\b(?:10\.\d{1,3}|192\.168|172\.(?:1[6-9]|2\d|3[01]))\.\d{1,3}\.\d{1,3}\b/ },
@@ -51,7 +60,7 @@ const context = await browser.newContext({
 
 let failed = false;
 for (const p of PAGES) {
-  const page = await context.newPage();
+  const page = await newPage(context, p);
   await page.goto(new URL(p.path, BASE).toString(), { waitUntil: "networkidle" });
   if (p.waitFor) await page.waitForSelector(p.waitFor, { timeout: 15000 });
 

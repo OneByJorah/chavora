@@ -1,12 +1,12 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-    Windows dev installer for ChatForge.
+    Windows dev installer for chavora.
 #>
 $ErrorActionPreference = "Stop"
 cd $PSScriptRoot
 
-Write-Host "=== Installing ChatForge local dev environment ===" -ForegroundColor Cyan
+Write-Host "=== Installing chavora local dev environment ===" -ForegroundColor Cyan
 
 if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
     Write-Error "Node.js is required. Install from https://nodejs.org/"

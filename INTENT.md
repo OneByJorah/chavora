@@ -1,6 +1,6 @@
 # INTENT.md — J1-PIPELINE Phase -1 (ORACLE)
 
-**Repository:** `OneByJorah/ChatForge`
+**Repository:** `OneByJorah/chavora`
 **Analysis Date:** 2026-07-05
 **Analyst:** J1-PIPELINE ORACLE (read-only)
 **Status:** Intent Reconstructed
@@ -11,11 +11,11 @@
 
 ### Technical Role
 
-ChatForge is a **lightweight, edge-native AI chat application** deployed on Cloudflare Workers. It provides a browser-based chat interface powered by Cloudflare's Workers AI inference network, with streaming responses delivered via Server-Sent Events (SSE).
+chavora is a **lightweight, edge-native AI chat application** deployed on Cloudflare Workers. It provides a browser-based chat interface powered by Cloudflare's Workers AI inference network, with streaming responses delivered via Server-Sent Events (SSE).
 
 | Category | Services | Ports |
 |----------|----------|-------|
-| Worker Runtime | Cloudflare Worker (`chatforge`) | 443 (HTTPS) |
+| Worker Runtime | Cloudflare Worker (`chavora`) | 443 (HTTPS) |
 | AI Inference | Workers AI (`@cf/meta/llama-3.1-8b-instruct-fp8`) | Internal CF API |
 | Static Assets | Cloudflare Workers Assets (vanilla HTML/JS/CSS) | Served by Worker |
 | Observability | Cloudflare Workers Observability | Internal CF |
@@ -37,7 +37,7 @@ Browser ──HTTPS──> Cloudflare Worker ──AI.run()──> Workers AI (L
 
 ### Operational Role
 
-ChatForge serves as a **reference implementation / starter template** for building AI-powered chat applications on Cloudflare Workers. It demonstrates:
+chavora serves as a **reference implementation / starter template** for building AI-powered chat applications on Cloudflare Workers. It demonstrates:
 
 - How to integrate Workers AI with streaming responses
 - How to serve a single-page chat app from a Worker
@@ -65,7 +65,7 @@ Building an AI chat application typically requires managing a backend server, a 
 
 The repo was **imported from Cloudflare's official template repository** on 2026-04-24 (initial commit: "source repo import" by `cloudflare[bot]`). It was originally a Cloudflare Workers AI chat template. The OneByJorah organization then:
 
-1. **Renamed** the project from the generic template name to **ChatForge** (June 2026)
+1. **Renamed** the project from the generic template name to **chavora** (June 2026)
 2. **Rebranded** the README to align with J1 brand standards
 3. **Added community governance** (CODE_OF_CONDUCT, CONTRIBUTING, SECURITY, issue/PR templates)
 4. **Enabled security scanning** (CodeQL, Dependabot)
@@ -78,12 +78,12 @@ The development was triggered by the need for a **JorahOne-branded, production-q
 
 ```
 JorahOne Ecosystem
-├── ChatForge              ← Edge-native AI chat reference / demo app
+├── chavora              ← Edge-native AI chat reference / demo app
 ├── Hermes Agent           ← AI agent orchestration (sibling project)
 └── OneByJorah org         ← Parent organization for J1 open-source projects
 ```
 
-ChatForge is a **standalone reference project** within the OneByJorah portfolio. It demonstrates Cloudflare Workers AI integration patterns that could be reused across other JorahOne projects. It is not a dependency of any other JorahOne system — it is a published template and portfolio piece.
+chavora is a **standalone reference project** within the OneByJorah portfolio. It demonstrates Cloudflare Workers AI integration patterns that could be reused across other JorahOne projects. It is not a dependency of any other JorahOne system — it is a published template and portfolio piece.
 
 ---
 
@@ -129,7 +129,7 @@ Evidence:
 ## Repository Structure
 
 ```
-ChatForge/
+chavora/
 ├── src/
 │   ├── index.ts                    # Worker entry point & request handler (104 lines)
 │   ├── types.ts                    # TypeScript type definitions (Env, ChatMessage)
@@ -140,7 +140,7 @@ ChatForge/
 │   └── chat.js                     # Frontend logic (SSE streaming, 230 lines)
 ├── docs/
 │   └── screenshots/
-│       └── chatforge-ui.png        # UI screenshot (32 KB)
+│       └── chavora-ui.png        # UI screenshot (32 KB)
 ├── .github/
 │   ├── workflows/
 │   │   └── codeql.yml             # CodeQL security analysis
@@ -174,9 +174,9 @@ ChatForge/
 
 ## Notes
 
-- **Repo rename history**: The project was originally imported from a Cloudflare template (likely `cloudflare/llm-chat-app-template` or similar). It was renamed to **ChatForge** in June 2026, with several commits dedicated to migrating references and updating the wrangler project name.
+- **Repo rename history**: The project was originally imported from a Cloudflare template (likely `cloudflare/llm-chat-app-template` or similar). It was renamed to **chavora** in June 2026, with several commits dedicated to migrating references and updating the wrangler project name.
 - **Initial commit**: `2bbd1a9` — "source repo import" by `cloudflare[bot]` on 2026-04-24. This is a template import, not an original creation.
-- **Security audit**: Commit `02113a0` ("audit(ChatForge): sanitize email references") — a security cleanup that removed email addresses from the codebase.
+- **Security audit**: Commit `02113a0` ("audit(chavora): sanitize email references") — a security cleanup that removed email addresses from the codebase.
 - **dependabot.yml references pip and docker ecosystems** — but the repo contains no Python code and no Dockerfile. These are artifacts from the J1 template boilerplate and are not applicable to this project.
 - **CodeQL scans for Python** — The CodeQL workflow includes `python` in its language matrix, but the repo has no Python code. This is also a template artifact.
 - **`package.json` has `cloudflare.publish: true`** — This project is published as a Cloudflare Workers template, making it discoverable in Cloudflare's template gallery.

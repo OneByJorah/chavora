@@ -1,11 +1,12 @@
 version: "3.8"
 
 services:
-  chatforge:
+  chavora:
+    image: ghcr.io/onebyjorah/chavora:latest
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: chatforge
+    container_name: chavora
     ports:
       - "127.0.0.1:8787:8787"
     restart: unless-stopped

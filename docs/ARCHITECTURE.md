@@ -1,8 +1,8 @@
-# ChatForge Architecture
+# chavora Architecture
 
 ## Overview
 
-ChatForge is a single-file Cloudflare Worker that serves both static frontend assets and an AI chat API endpoint.
+chavora is a single-file Cloudflare Worker that serves both static frontend assets and an AI chat API endpoint.
 
 ## Architecture Diagram
 

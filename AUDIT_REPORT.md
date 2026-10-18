@@ -1,4 +1,4 @@
-# AUDIT_REPORT - ChatForge
+# AUDIT_REPORT - chavora
 **Date:** 2026-08-22
 **Score:** 88/100 - OPERATIONAL
 - Clean TypeScript Cloudflare Worker; typecheck, 11 unit tests, and `wrangler deploy --dry-run` all pass
