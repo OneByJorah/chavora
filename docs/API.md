@@ -1,8 +1,8 @@
-# ChatForge API Reference
+# chavora API Reference
 
 ## Base URL
 
-When deployed: `https://chatforge.<your-subdomain>.workers.dev`
+When deployed: `https://chavora.<your-subdomain>.workers.dev`
 
 Locally: `http://localhost:8787`
 

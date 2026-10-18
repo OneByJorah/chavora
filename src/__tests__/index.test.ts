@@ -1,5 +1,5 @@
 /**
- * ChatForge — Unit Tests
+ * chavora — Unit Tests
  *
  * Covers request routing, streaming, error handling, and system prompt injection.
  */
@@ -41,7 +41,7 @@ const mockCtx = {
 // Tests
 // ---------------------------------------------------------------------------
 
-describe("ChatForge Worker", () => {
+describe("chavora Worker", () => {
   beforeEach(() => {
     vi.clearAllMocks();
   });

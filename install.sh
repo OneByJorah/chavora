@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-echo "=== Installing ChatForge local dev environment ==="
+echo "=== Installing chavora local dev environment ==="
 
 if ! command -v node &> /dev/null; then
     echo "Node.js is required. Install from https://nodejs.org/"
