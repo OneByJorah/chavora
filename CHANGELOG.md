@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/OneByJorah/chavora/compare/v1.0.1...v1.0.2) (2026-10-26)
+
+
+### Bug Fixes
+
+* non-root nginx, clean .env placeholders, guarded release reconcile ([#80](https://github.com/OneByJorah/chavora/issues/80)) ([5bccb44](https://github.com/OneByJorah/chavora/commit/5bccb442fd962a6ae20be47549fed696c165394f))
+
 ## [1.0.1] - 2026-08-22
 ### Fixed
 - README rewritten to match actual code (Workers AI single-model SSE chat; removed fictional multi-provider/JWT/WebSocket/Docker claims)
